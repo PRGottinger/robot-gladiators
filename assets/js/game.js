@@ -1,3 +1,11 @@
+
+
+//Game States 
+// "WIN" - Player robot has defeated all enemy-robots
+//  * Fight all enemy-robots
+//  * Defeat all enemy-robots
+// "LOSE" - Player robot's health is zero or less
+
 var playerName = window.prompt("what is your robot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
@@ -6,7 +14,15 @@ var playerMoney = 10;
 // You can also log multiple values at once like this
 console.log(playerName, playerAttack, playerHealth);
 
-var enemyName = "Roberto";
+var enemyNames = ["Roberto", "Amy Android", "Robo Trumble"];
+console.log(enemyNames.length);
+
+for(var i = 0; i < enemyNames.length; i++) {
+    console.log(enemyNames[i]);
+    console.log(i);
+    console.log(enemyNames[i] + " is at " + i + " index");
+}
+
 var enemyHealth = 50;
 var enemyAttack = 12;
 
@@ -59,37 +75,11 @@ var fight = function() {
         else {
             fight();
         }
-    
-        window.alert(playerName + " has chosen to skip the fight!");
     } else {
         window.alert("You need to choose a valid option. Try again!");
     }   
-
-
-
 };
 
-fight ();
-
-/*
-//note the lack of quotation marks around playerName
-console.log(playerName);
-
-console.log ("This logs a string, good for leaving yourself a message");
-//this will do math and log 20
-console.log(10+10);
-//what is this?
-console.log("Our robot's name is " + playerName);
-
-
-//this creates a function names "fight"
-
-function fight() {
-    window.alert("The fight has begun!");
-}
-
+// run fight function to start game
 //fight ();
 
-window.prompt("what is your robot's name?");
-
-*/
